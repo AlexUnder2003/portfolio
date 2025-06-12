@@ -13,6 +13,8 @@ import { Link as HerouiLink } from "@heroui/link";
 import { Tab, Tabs } from "@heroui/tabs";
 import { ThemeSwitch } from "./theme-switch";
 import { useLocation, useNavigate } from "react-router-dom";
+import SvgLogo from "./icons/Logo";
+
 
 export const AcmeLogo = () => {
   return (
@@ -40,14 +42,14 @@ export default function NavbarBlurred() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar onMenuOpenChange={setIsMenuOpen} className="bg-tr">
       {/* гамбургер + логотип */}
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
           className="sm:hidden"
         />
-        <NavbarBrand><AcmeLogo /></NavbarBrand>
+        <NavbarBrand><SvgLogo className="fill-foreground" /></NavbarBrand>
       </NavbarContent>
 
       {/* табы (desktop) */}

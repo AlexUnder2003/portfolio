@@ -46,7 +46,7 @@ export default function ProjectsPage() {
         </div>
 
         {projects.map((proj) => (
-          <Card key={proj.title} className=" max-w-5xl mt-5" radius="lg">
+          <Card key={proj.title} className=" max-w-5xl mt-5 order-1 md:order-1 md:col-span-8 row-span-1 flex flex-col p-6 bg-white/10 backdrop-blur-md border border-white/10" radius="lg">
             <CardHeader className="m-3 pl-3 flex-col items-start">
               <h4 className="text-3xl">{proj.title}</h4>
             </CardHeader>
@@ -63,6 +63,7 @@ export default function ProjectsPage() {
             </CardFooter>
           </Card>
         ))}
+        <h1 className="text-3xl">Этот сайт тоже сделал я.</h1>
       </section>
     </DefaultLayout>
   );

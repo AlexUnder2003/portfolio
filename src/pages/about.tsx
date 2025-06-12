@@ -30,7 +30,8 @@ export default function DocsPage() {
           <h1 className={title()}>Обо мне</h1>
         </div>
         <div className="gap-4">
-          <div className="max-w-5xl text-start text-3xl mb-5">
+          <div className="max-w-5xl text-start text-xl md:text-3xl mb-10 mx-3 mt-2">
+            
             <p>Меня зовут Назимов Александр, мне 21 год, я родом из Санкт‑Петербурга.
              <br />Я backend‑разработчик со специализацией на Python.
              <br />
@@ -38,12 +39,13 @@ export default function DocsPage() {
              Я создаю эффективные и четко организованные системы — например, разработал собственную систему рекомендаций картин по тегам, которая не использует нейросети, а работает по классической логике — сопоставлению метаданных. 
              <br />
              <br />Помимо backend-разработки, активно использую JavaScript, TypeScript и React для создания интерактивных и отзывчивых пользовательских интерфейсов. 
-             <br />Также имею значительный опыт в парсинге данных и асинхронном программировании. 
+             <br />
+             <br />Также имею опыт в парсинге данных и асинхронном программировании. 
              <br />В работе стремлюсь к чистому и эффективному коду, постоянно развиваюсь и быстро адаптируюсь к новым задачам и технологиям.</p>
           </div>
         </div>
         
-        <Image src="/IMG_0509.JPG" alt="me" width={500} />
+        <Image src="/IMG_0509.JPG" alt="me" width={500} className="mt-5" />
         <section className="py-16">
           <div className="max-w-5xl mx-auto px-4">
             <h2 className="text-3xl md:text-4xl font-semibold mb-10">
@@ -68,7 +70,7 @@ export default function DocsPage() {
                   </div>
 
                   {/* Описание */}
-                  <p className="text-zinc-600">{exp.description}</p>
+                  <p className="text-zinc-700">{exp.description}</p>
                 </div>
               ))}
             </div>

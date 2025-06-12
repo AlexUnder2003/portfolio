@@ -13,5 +13,18 @@ export default {
     extend: {},
   },
   darkMode: "class",
-  plugins: [heroui()],
+  plugins: [heroui(
+    {
+      themes: {
+        light: {
+          colors: {
+            foreground: "#363636",
+          }
+          
+        },
+        dark: {
+        },
+      },
+    }
+  )],
 }
