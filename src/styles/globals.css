@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.user-select-none {
+  user-select: none; /* запрет выделения текста */
+  -webkit-tap-highlight-color: transparent; /* отключает синий "highlight" на мобильных/тач */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}

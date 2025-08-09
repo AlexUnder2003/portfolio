@@ -1,27 +1,30 @@
-import { Card,  CardHeader } from "@heroui/card";
+import { Card, CardHeader } from "@heroui/card";
 import DefaultLayout from "@/layouts/default";
+import { useLanguage } from "@/context/LanguageContext"; // путь подставь свой
 
 export default function IndexPage() {
+  const { lang } = useLanguage(); // ← теперь ты берешь язык отсюда
+
   return (
     <DefaultLayout>
       <div className="flex-1 h-full grid grid-cols-1 grid-rows-3 md:grid-cols-12 md:grid-rows-1 gap-2 w-full p-3">
-        {/* Текстовый блок-карточка с размытым прозрачным фоном */}
         <Card
           className="order-1 md:order-1 md:col-span-8 row-span-1 flex flex-col p-6 bg-white/10 backdrop-blur-md border border-white/10"
           radius="lg"
         >
-          {/* добавили items-start и text-left */}
           <CardHeader className="flex flex-col items-start text-left">
-            <h1 className="text-4xl xl:text-9xl mb-2">
-              Меня зовут Александр.
+            <h1 className="text-4xl md:text-6xl xl:text-9xl mb-2 leading-tight">
+              {lang === "ru" ? "Меня зовут Александр." : "My name is Alexander."}
             </h1>
-            <span className="text-2xl xl:text-4xl mt-2">
-              Я Python Backend-разработчик, но, как видите, Frontend тоже умею.
-            </span>
+
+            <p className="text-2xl xl:text-5xl xl:ml-1 mt-2">
+              {lang === "ru"
+                ? "Я Python Backend-разработчик, но, как видите, Frontend тоже умею."
+                : "I'm a Python Backend Developer, but as you can see - I also do Frontend."}
+            </p>
           </CardHeader>
         </Card>
 
-        {/* Карточки: на мобильных под текстом (rows 2-3), на десктопе — справа в одну колонку */}
         <div className="order-2 md:order-2 md:col-span-4 md:row-span-1 row-span-2 flex flex-col space-y-2">
           <Card
             isFooterBlurred

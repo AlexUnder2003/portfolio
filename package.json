@@ -10,8 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.6.1",
+    "@heroui/badge": "^2.2.13",
     "@heroui/button": "2.2.21",
     "@heroui/card": "^2.2.20",
+    "@heroui/chip": "^2.2.17",
     "@heroui/code": "2.2.16",
     "@heroui/dropdown": "2.3.21",
     "@heroui/image": "^2.2.13",
