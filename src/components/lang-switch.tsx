@@ -7,7 +7,6 @@ export const LanguageSwitch: React.FC = () => {
 
   const toggleLang = () => {
     setLang(lang === "ru" ? "en" : "ru");
-    document.documentElement.lang = lang === "ru" ? "en" : "ru";
   };
 
   return (

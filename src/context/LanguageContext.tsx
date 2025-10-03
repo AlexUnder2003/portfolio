@@ -16,16 +16,25 @@ export const useLanguage = () => {
   return context;
 };
 
+const resolveInitialLanguage = (): Language => {
+  if (typeof window === "undefined") return "ru";
+
+  const stored = window.localStorage.getItem("app-language");
+  if (stored === "en" || stored === "ru") {
+    return stored;
+  }
+
+  const htmlLang = document.documentElement.lang;
+  return htmlLang === "en" ? "en" : "ru";
+};
+
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [lang, setLang] = useState<Language>("ru");
+  const [lang, setLang] = useState<Language>(() => resolveInitialLanguage());
 
   useEffect(() => {
-    const htmlLang = document.documentElement.lang as Language;
-    setLang(htmlLang === "en" ? "en" : "ru");
-  }, []);
-
-  useEffect(() => {
+    if (typeof document === "undefined") return;
     document.documentElement.lang = lang;
+    window.localStorage.setItem("app-language", lang);
   }, [lang]);
 
   return (

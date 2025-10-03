@@ -7,6 +7,27 @@ import { useLanguage } from "@/context/LanguageContext";
 const projects = {
   ru: [
     {
+      title: "FinAssist",
+      img: "/finassist.png",
+      alt: "Скриншот FinAssist",
+      description:
+        "Pet-проект финансового помощника для себя и семьи: проектирую архитектуру, разрабатываю backend на FastAPI и постепенно собираю фронтенд на React; сейчас в активной стадии разработки интерфейса.",
+    },
+    {
+      title: "FMS",
+      img: "/family.png",
+      alt: "Скриншот FMS",
+      description:
+        "Семейный менеджер с распределением задач и управлением семьей: поднял с нуля полный стек на FastAPI, React и PostgreSQL, настроил крон-задачи и уведомления, CI/CD пайплайн и деплой в облако.",
+    },
+    {
+      title: "pywebpush",
+      img: "/pywebpush.png",
+      alt: "Скриншот pywebpush",
+      description:
+        "Open source: добавил в pywebpush асинхронный API на asyncio, переписал отправку push-уведомлений, обновил тесты и документацию, помогал готовить релиз.",
+    },
+    {
       title: "Art Perspektiva",
       img: "/artperspektiva.png",
       alt: "Скриншот Art Perspektiva",
@@ -43,6 +64,27 @@ const projects = {
     },
   ],
   en: [
+    {
+      title: "FinAssist",
+      img: "/finassist.png",
+      alt: "FinAssist screenshot",
+      description:
+        "Personal finance helper for my family: designing the architecture, building the FastAPI backend, and currently focusing on the React frontend which is under active development.",
+    },
+    {
+      title: "FMS",
+      img: "/family.png",
+      alt: "FMS screenshot",
+      description:
+        "Family management system I built from scratch: full-stack FastAPI, React and PostgreSQL app with scheduled cron jobs, notification pipeline, and end-to-end CI/CD deployment to the cloud.",
+    },
+    {
+      title: "pywebpush",
+      img: "/pywebpush.png",
+      alt: "pywebpush screenshot",
+      description:
+        "Open-source: introduced an asyncio-based asynchronous API to pywebpush, refactored push delivery internals, refreshed tests and docs, and supported the release process.",
+    },
     {
       title: "Art Perspektiva",
       img: "/artperspektiva.png",

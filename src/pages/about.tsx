@@ -1,13 +1,22 @@
 import { useLanguage } from "@/context/LanguageContext";
 import { title } from "@/components/primitives";
 import { Image } from "@heroui/image";
-import { Chip } from "@heroui/chip"; 
+import { Chip } from "@heroui/chip";
 import DefaultLayout from "@/layouts/default";
 
 const experiences = {
   ru: [
     {
-      period: "2024 – Present",
+      period: "2025 – Present",
+      role: "Full-Stack разработчик",
+      company: "USP PT",
+      description:
+        "Разрабатываю семейного менеджера FMS: проектирую backend на FastAPI и PostgreSQL, " +
+        "развиваю интерфейс на React, поддерживаю cron-задачи и систему уведомлений. " +
+        "Настроил CI/CD пайплайн и отвечаю за облачное развёртывание и сопровождение.",
+    },
+    {
+      period: "2024 – 2025",
       role: "Full-Stack разработчик",
       company: "ArtPerspektiva",
       description:
@@ -25,6 +34,15 @@ const experiences = {
     },
   ],
   en: [
+    {
+      period: "2025 – Present",
+      role: "Full-Stack Developer",
+      company: "USP PT",
+      description:
+        "Developing the FMS family-management platform: architecting the FastAPI and PostgreSQL backend, " +
+        "building the React frontend, and maintaining cron-driven notification services. " +
+        "Set up the CI/CD pipeline and manage cloud deployment and operations.",
+    },
     {
       period: "2024 – Present",
       role: "Full-Stack Developer",
@@ -102,6 +120,10 @@ const aboutMeText = {
       <br />
       Также имею опыт в парсинге данных и асинхронном программировании.
       <br />
+      <br />
+      В open source-проектах развиваю библиотеку pywebpush: добавил асинхронную поддержку на asyncio, помог подготовить и протестировать релиз новой версии.
+      <br />
+      <br />
       В работе стремлюсь к чистому и эффективному коду, постоянно развиваюсь и быстро адаптируюсь к новым задачам и технологиям.
     </>
   ),
@@ -119,6 +141,10 @@ const aboutMeText = {
       <br />
       <br />
       I also have experience in data parsing and asynchronous programming.
+      <br />
+      <br />
+      In open-source, I contribute to pywebpush: implemented asyncio-based support and helped prepare and test the project's latest release.
+      <br />
       <br />
       I strive for clean and efficient code, continuously improve, and quickly adapt to new tasks and technologies.
     </>
